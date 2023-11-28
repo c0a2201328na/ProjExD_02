@@ -66,8 +66,8 @@ def main():
             if event.type == pg.QUIT: 
                 return
         if kk_rct.colliderect(bb_rct):
-            kk_img = kk_img_ch
-            screen.fill((255,0,0))
+            kk_img = kk_img_ch  #演習3 画像切り替え
+            screen.fill((255,0,0))  #演習5画面切り替え
             screen.blit(kk_img, kk_rct)
             pg.display.update()
             print("Game Over")
@@ -79,7 +79,7 @@ def main():
                 sum_mv[0] += tpl[0]
                 sum_mv[1] += tpl[1]
         accs = [a for a in range(1,11)]        
-        avx, avy = vx*accs[min(tmr//500, 9)], vy*accs[min(tmr//500, 9)]   
+        avx, avy = vx*accs[min(tmr//500, 9)], vy*accs[min(tmr//500, 9)]   #演習3　加速
         vx, vy = +avx, +avy     
                    
 
