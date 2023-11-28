@@ -80,7 +80,7 @@ def main():
                 sum_mv[1] += tpl[1]
         accs = [a for a in range(1,11)]        
         avx, avy = vx*accs[min(tmr//500, 9)], vy*accs[min(tmr//500, 9)]   
-        vx, vy = avx, avy     
+        vx, vy = +avx, +avy     
                    
 
         screen.blit(bg_img, [0, 0])
